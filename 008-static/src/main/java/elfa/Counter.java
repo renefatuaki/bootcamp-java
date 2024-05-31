@@ -2,11 +2,7 @@ package elfa;
 
 public class Counter {
     public static int totalCount = 0;
-    public int instanceCount;
-
-    public Counter() {
-        this.instanceCount = 0;
-    }
+    public int instanceCount = 0;
 
     public static void incrementTotalCount() {
         totalCount++;
