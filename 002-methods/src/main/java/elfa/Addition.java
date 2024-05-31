@@ -10,7 +10,7 @@ public class Addition {
         System.out.println("makePositive(10): " + makePositive(10));
         System.out.println("makePositive(-10): " + makePositive(-10));
         System.out.println("makePositive(0): " + makePositive(0));
-        
+
         System.out.println("surprise(10, 20): " + surprise(10, 20));
         System.out.println("surprise(20, 10): " + surprise(20, 10));
 
