@@ -2,7 +2,6 @@ package pharmacy;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class Pharmacy {
     //Step 2: Create a Java class 'Pharmacy' that uses a Java Map to store the Medication name as the key and its information as the value.
@@ -47,10 +46,8 @@ public class Pharmacy {
 
     //Step 7: Implement a method to print all Medications in the map, including their name, price, and availability.
     public void printMedications() {
-        Set<String> keys = this.medications.keySet();
-
-        for (String key : keys) {
-            System.out.println(this.medications.get(key));
+        for (Medication medication : this.medications.values()) {
+            System.out.println(medication);
         }
     }
 }
