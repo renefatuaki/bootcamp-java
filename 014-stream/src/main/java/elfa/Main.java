@@ -47,7 +47,7 @@ public class Main {
                 """);
 
         try (Stream<String> lines = Files.lines(Path.of("students.csv"))) {
-            Stream<String> reducedLines = lines.skip(1);
+            Stream<String> reducedLines = lines.skip(1).distinct();
             reducedLines.forEach(System.out::println);
         } catch (IOException error) {
             // Handle the exception
