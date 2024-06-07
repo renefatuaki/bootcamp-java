@@ -6,7 +6,6 @@ package elfa;
 //Step 4: Create a class PersonRepository with a list/map of persons.
 //Step 5: Write a method in the class PersonRepository that searches for and returns a person based on their id from the list/map. The method should return an Optional.
 //Step 6: In your main method, check if the person exists. If they do, print the name and favorite day of the week to the console.
-//If you have already completed this task earlier, you may work on the bonus task on the next page.
 
 public class Main {
     public static void main(String[] args) {
@@ -20,5 +19,14 @@ public class Main {
         Person person2 = new Person("0002", "Peter", DaysOfWeek.MONDAY);
 
         PersonRepository personRepo = new PersonRepository();
+
+        personRepo.addPerson(person1);
+        personRepo.addPerson(person2);
+
+        personRepo.searchPersonName("0001").ifPresent(person -> System.out.println(person.name() + " " + person.favoriteDay().getDay()));
+        personRepo.searchPersonName("0002").ifPresent(person -> System.out.println(person.name() + " " + person.favoriteDay().getDay()));
+
+        // No existing person
+        personRepo.searchPersonName("0003").ifPresent(person -> System.out.println(person.name() + " " + person.favoriteDay().getDay()));
     }
 }
